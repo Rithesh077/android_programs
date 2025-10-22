@@ -23,7 +23,81 @@
     }
     return 0;
 }*/
-void solveQuad()
+/*
+#include<stdbool.h>
+bool isEven(int num);
+bool isOdd(int num);
+float getExponent(float base, int exponent);
+signed float createVector(signed float dataEntry);
+
+
+typedef struct vectorNode{
+    signed float dataEntry;
+    struct vectorNode *next;
+} vectorNode;
+
 int main(){
-    //call functions and user input
+    int number;
+    printf("Enter a number to check if it's even or odd:");
+    scanf("%d",&number);
+    if(isEven(number)){
+        printf("%d is Even.\n",number);
+    }else if(isOdd(number)){
+        printf("%d is Odd.\n",number);
+    }
+    return 0;
 }
+bool isEven(int num){
+    if(num%2==0){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool isOdd(int num){
+    if(num%2!=0){
+        return true;
+    }else{
+        return false;
+    }
+}
+float getExponent(float base, int exponent){
+    float result=1.0;
+    for(int i=0;i<exponent;i++){
+        result=result*base;
+    }
+    return result;
+}
+*/
+/*
+#include<stdlib.h>
+int main() {
+    int x = 10;
+    int* p = &x;
+
+    printf("Value of x: %d\n", x);
+    printf("Address of x: %p\n", &x);
+    printf("Value of p: %p\n", p);
+    printf("Value pointed to by p: %d\n", *p);
+
+    *p = 20; // Change the value using the pointer
+    printf("New value of x: %d\n", x);
+    return 0;
+}*/
+/*
+#include <stdio.h>
+int main() {
+    int a = 100;
+    int b = 200;
+    int* p = &a;
+
+    printf("p points to a: %d\n", *p);
+
+    p = &b; // Make p point to b instead
+    printf("p now points to b: %d\n", *p);
+
+    *p = 250;
+    printf("Final value of a: %d\n", a);
+    printf("Final value of b: %d\n", b);
+    return 0;
+}*/
