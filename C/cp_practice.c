@@ -101,3 +101,25 @@ int main() {
     printf("Final value of b: %d\n", b);
     return 0;
 }*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void allocate_memory(int** ptr) {
+    *ptr = (int*)malloc(sizeof(int));
+    **ptr = 42;
+}
+
+int main() {
+    int* my_ptr = NULL;
+    allocate_memory(&my_ptr);
+
+    if (my_ptr == NULL) {
+        printf("my_ptr is still NULL!\n");
+    } else {
+        printf("Value: %d\n", *my_ptr);
+    }
+
+    free(my_ptr);
+    return 0;
+}
