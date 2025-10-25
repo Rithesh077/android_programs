@@ -101,7 +101,7 @@ int main() {
     printf("Final value of b: %d\n", b);
     return 0;
 }*/
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -121,5 +121,30 @@ int main() {
     }
 
     free(my_ptr);
+    return 0;
+}
+*/
+
+
+void swap_fail(int x, int y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+void swap_correct(int* ptr_a, int* ptr_b) {
+    int temp = *ptr_a;
+    *ptr_a = *ptr_b;
+    *ptr_b = temp;
+}
+
+int main() {
+    int a = 5, b = 10;
+    printf("Before swap: a = %d, b = %d\n", a, b);
+    swap_fail(a, b);
+    printf("After swap_fail: a = %d, b = %d\n", a, b);
+    swap_correct(&a, &b);
+    printf("After swap_correct: a = %d, b = %d\n", a, b);
+    
     return 0;
 }
