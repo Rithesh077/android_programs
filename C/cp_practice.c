@@ -125,6 +125,7 @@ int main() {
 }
 */
 
+/*
 
 void swap_fail(int x, int y) {
     int temp = x;
@@ -145,6 +146,23 @@ int main() {
     printf("After swap_fail: a = %d, b = %d\n", a, b);
     swap_correct(&a, &b);
     printf("After swap_correct: a = %d, b = %d\n", a, b);
+    
+    return 0;
+}*/
+int main() {
+    int x = 123;
+    int* p = &x;
+    int** pp = &p;
+
+    printf("Value of x: %d\n", x);
+    printf("Value using p: %d\n", *p);
+    printf("Value using pp: %d\n\n", **pp);
+
+    printf("Address of x: %p\n", &x);
+    printf("Address stored in p: %p\n", p);
+    printf("Address of p: %p\n", &p);
+    printf("Address stored in pp: %p\n", pp);
+    printf("Value of *pp: %p\n", *pp);
     
     return 0;
 }
