@@ -1,5 +1,5 @@
-#include<stdio.h>
-/*int main(){
+/*#include<stdio.h>
+int main(){
     float maxQuant,rate,time;
     printf("Enter max quantity:");
     scanf("%f",&maxQuant);
@@ -13,9 +13,8 @@
     float side1,side2,side3;
     printf("Enter 3 sides' length to determine the type of triangle:");
     scanf("%f %f %f",&side1,&side2,&side3);
-    if(side1==side2==side3){
+    if(side1==side2 && side2==side3){
         printf("'Tis an Equilateral Triangle.\n");
-        break;
     }else if(side1==side2||side2==side3||side1==side3){
         printf("'Tis an Isosceles Triangle.\n");
     }else{
@@ -149,7 +148,7 @@ int main() {
     
     return 0;
 }*/
-int main() {
+/*int main() {
     int x = 123;
     int* p = &x;
     int** pp = &p;
@@ -165,4 +164,24 @@ int main() {
     printf("Value of *pp: %p\n", *pp);
     
     return 0;
+}*/
+#include <stdio.h>
+int main() {
+    printf("Enter two float values to create a tuple:\n");
+    float x, y;
+    scanf("%f %f", &x, &y);
+    tuple_gen(x, y);
+    printf("Tuple created with values: (%f, %f)\n", x, y);
+    return 0;
+}
+
+tuple_gen(float x, float y){
+    typedef struct tuple{
+        float first;
+        float second;
+    }tuple;
+    tuple newTuple;
+    newTuple.first=x;
+    newTuple.second=y;
+    return newTuple;
 }
