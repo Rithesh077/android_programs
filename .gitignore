@@ -5,3 +5,6 @@ dynamic_stat_calc
 *.out
 *.obj
 cp_practice
+python
+javascript
+C
