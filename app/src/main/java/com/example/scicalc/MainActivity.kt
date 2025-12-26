@@ -5,15 +5,10 @@ import android.os.Bundle
 import android.widget.*
 import kotlin.math.*
 
-// Stopwatch logic based on system clock + Handler
-// (Reference URL added because you requested it explicitly)
-// https://developer.android.com/reference/kotlin/androidx/appsearch/builtintypes/Stopwatch#STATUS_RESET()
+// https://developer.android.com/referencekotlin/androidx/appsearch/builtintypes/Stopwatch#STATUS_RESET()
 
 class MainActivity : AppCompatActivity() {
 
-    //------------------------------
-    // Stopwatch state variables
-    //------------------------------
     private var isRunning = false
     private var startTime = 0L
     private var elapsedTime = 0L
@@ -23,9 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //---------------------------------------------------------
-        // SCIENTIFIC CALCULATOR SETUP
-        //---------------------------------------------------------
         val input = findViewById<TextView>(R.id.tvExpression)
         val result = findViewById<TextView>(R.id.tvResult)
 
@@ -43,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Number keys
         val buttons = listOf(
             R.id.btn0 to "0", R.id.btn1 to "1", R.id.btn2 to "2",
             R.id.btn3 to "3", R.id.btn4 to "4", R.id.btn5 to "5",
@@ -55,7 +46,6 @@ class MainActivity : AppCompatActivity() {
             findViewById<Button>(btnId).setOnClickListener { append(value) }
         }
 
-        // Operators
         findViewById<Button>(R.id.btnPlus).setOnClickListener { append("+") }
         findViewById<Button>(R.id.btnMinus).setOnClickListener { append("-") }
         findViewById<Button>(R.id.btnMul).setOnClickListener { append("*") }
@@ -64,11 +54,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnMod).setOnClickListener { append("%") }
         findViewById<Button>(R.id.btnDot).setOnClickListener { append(".") }
 
-        // Parentheses
         findViewById<Button>(R.id.btnOpen).setOnClickListener { append("(") }
         findViewById<Button>(R.id.btnClose).setOnClickListener { append(")") }
 
-        // Scientific functions
         findViewById<Button>(R.id.btnSin).setOnClickListener { append("sin(") }
         findViewById<Button>(R.id.btnCos).setOnClickListener { append("cos(") }
         findViewById<Button>(R.id.btnTan).setOnClickListener { append("tan(") }
@@ -76,11 +64,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnLn).setOnClickListener { append("ln(") }
         findViewById<Button>(R.id.btnSqrt).setOnClickListener { append("sqrt(") }
 
-        // Constants
         findViewById<Button>(R.id.btnPi).setOnClickListener { append("3.14159265") }
         findViewById<Button>(R.id.btnE).setOnClickListener { append("2.71828182") }
 
-        // Clear & Backspace
         findViewById<Button>(R.id.btnClear).setOnClickListener {
             input.text = ""
             result.text = ""
@@ -91,13 +77,8 @@ class MainActivity : AppCompatActivity() {
             if (text.isNotEmpty()) input.text = text.substring(0, text.length - 1)
         }
 
-        // Equals
         findViewById<Button>(R.id.btnEqual).setOnClickListener { calculate() }
 
-
-        //---------------------------------------------------------
-        // STOPWATCH SETUP
-        //---------------------------------------------------------
         val stopwatchText = findViewById<TextView>(R.id.tvStopwatch)
         val startBtn = findViewById<Button>(R.id.btnStart)
         val stopBtn = findViewById<Button>(R.id.btnStop)
@@ -142,14 +123,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    //---------------------------------------------------------
-    // VERY SMALL MATH EXPRESSION EVALUATOR
-    //---------------------------------------------------------
-    // Handles + - * / % ^ sin cos tan log ln sqrt ( )
-    //
-    // No external libraries. Fully custom.
-    //---------------------------------------------------------
     private fun evaluate(expr: String): Double {
         return object {
             var i = -1
@@ -174,11 +147,6 @@ class MainActivity : AppCompatActivity() {
                 if (i < expr.length) throw RuntimeException("Unexpected: " + expr[i])
                 return x
             }
-
-            // Grammar:
-            // expression = term | expression `+` term | expression `-` term
-            // term = factor | term `*` factor | term `/` factor | term `%` factor
-            // factor = number | function | factor `^` factor
 
             fun parseExpression(): Double {
                 var x = parseTerm()
