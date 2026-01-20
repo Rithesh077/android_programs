@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Student Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year" />
+
+    <RadioGroup
+        android:id="@+id/rgYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbYear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st" />
+
+        <RadioButton
+            android:id="@+id/rbYear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2nd" />
+
+        <RadioButton
+            android:id="@+id/rbYear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3rd" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbHostel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hostel Facility" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+</LinearLayout>
