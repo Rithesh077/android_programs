@@ -18,5 +18,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnNavCampusHelper).setOnClickListener {
             startActivity(Intent(this, CampusInfoActivity::class.java))
         }
+        findViewById<Button>(R.id.btnNavPeakJojo).setOnClickListener {
+            startActivity(Intent(this, PeakJOJO::class.java))
+        }
     }
 }

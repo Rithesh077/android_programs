@@ -24,6 +24,7 @@
         <activity android:name=".SciCalcActivity" />
         <activity android:name=".StudentDetailsActivity" />
         <activity android:name=".CampusInfoDetailsActivity" />
+        <activity android:name=".PeakJOJO" />
     </application>
 
 </manifest>
