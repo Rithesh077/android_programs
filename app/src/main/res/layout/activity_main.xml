@@ -17,6 +17,12 @@
         android:id="@+id/btnNavCampusHelper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Campus Helper"/>
+        android:text="campus shi"/>
+
+    <Button
+        android:id="@+id/btnNavPeakJojo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Press for Peak"/>
 
 </LinearLayout>
