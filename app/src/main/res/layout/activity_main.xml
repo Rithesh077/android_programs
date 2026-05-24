@@ -17,12 +17,27 @@
         android:id="@+id/btnNavCampusHelper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="campus shi"/>
+        android:text="campus shi"
+        android:layout_marginBottom="8dp"/>
 
     <Button
         android:id="@+id/btnNavPeakJojo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Press for Peak"/>
+        android:text="Press for Peak"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnNewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Activity"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnLaunchMiniApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mini App" />
 
 </LinearLayout>

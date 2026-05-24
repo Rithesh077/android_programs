@@ -1,10 +1,35 @@
 .vscode/
-dynamic_stat_calc
-*.exe
-*.o
-*.out
-*.obj
-cp_practice
-python
-javascript
-C
+
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+*.iml
+.idea/
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Gradle files
+.gradle/
+build/
+app/build/
+local.properties
+
+# Log Files
+*.log
+
+# NDK
+.cxx/
+.externalNativeBuild/
+
