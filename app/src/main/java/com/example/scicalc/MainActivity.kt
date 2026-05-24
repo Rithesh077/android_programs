@@ -14,12 +14,17 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnNavSciCalc).setOnClickListener {
             startActivity(Intent(this, SciCalcActivity::class.java))
         }
-
         findViewById<Button>(R.id.btnNavCampusHelper).setOnClickListener {
             startActivity(Intent(this, CampusInfoActivity::class.java))
         }
         findViewById<Button>(R.id.btnNavPeakJojo).setOnClickListener {
             startActivity(Intent(this, PeakJOJO::class.java))
+        }
+        findViewById<Button>(R.id.btnNewActivity).setOnClickListener {
+            startActivity(Intent(this, NewActivity::class.java))
+        }
+        findViewById<Button>(R.id.btnLaunchMiniApp).setOnClickListener {
+            startActivity(Intent(this, MiniAppActivity::class.java))
         }
     }
 }

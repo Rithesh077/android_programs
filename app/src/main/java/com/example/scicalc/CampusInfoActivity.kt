@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class CampusInfoActivity : AppCompatActivity() {
 
@@ -35,12 +36,12 @@ class CampusInfoActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.d("Lifecycle", "onPause invoked")
+        Toast.makeText(this,"onPause invoked",Toast.LENGTH_SHORT).show()
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("Lifecycle", "onStop invoked")
+        Toast.makeText(this,"onStop invoked",Toast.LENGTH_SHORT).show()
     }
 
     private fun showGreeting(): String {
